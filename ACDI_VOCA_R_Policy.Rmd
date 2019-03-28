@@ -123,6 +123,12 @@ When collaborating on packages (this can apply to projects too) it is important 
 
 When using an ACDI/VOCA R package, please remember to PULL the latest version from Github from the Github panel in RStudio. When contributing to any of our R packages please create your own branch and when you're done submit a Pull Request to the package authors. For an introduction on contributing to open-source using GitHub, see [here](https://github.com/firstcontributions/first-contributions).
 
+## Misc
+
+Here are some general best practices that should be followed:
+
+ - Inputs into complex functions should be stated explicitly, example: DO THIS: `function(arg1 = x, arg2 = y)` instead of this: `function(x,y)`. It's a bit more annoying, but does help resolve conflicts, especially when working with packages like `ACDIVOCAdataGetter` that are continuously in active development.
+
 ## For Admins: how to test pull requests:
 
  1.	Git fetch
