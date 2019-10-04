@@ -128,7 +128,8 @@ When using an ACDI/VOCA R package, please remember to PULL the latest version fr
 Here are some general best practices that should be followed:
 
  - Inputs into complex functions should be stated explicitly, example: DO THIS: `function(arg1 = x, arg2 = y)` instead of this: `function(x,y)`. It's a bit more annoying, but does help resolve conflicts, especially when working with packages like `ACDIVOCAdataGetter` that are continuously in active development.
-
+ - Use `tibble` and `as_tibble` rather than `data.frame` and `as.data.frame`
+ 
 ## For Admins: how to test pull requests:
 
  1.	Git fetch
