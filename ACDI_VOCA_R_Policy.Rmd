@@ -113,11 +113,11 @@ library(bulletchartr)
 
 R is an open-source language with tons of community support online and in print. A great way to read up on the latest R news is to go on Twitter and search for `#rstats`. You should also subscribe to [R Bloggers](https://www.r-bloggers.com/) to get a curated stream of news, blog posts, and tutorials provided by thousands of R users from across the world. 
 
-For getting help, go over to [StackOverflow](https://stackoverflow.com) and look up questions tagged with `[r]` and any other R package you might be having trouble with. Another good resource that is solely dedicated to R problems and discussion is [RStudio Community](https://community.rstudio.com/). One can also try asking for help on Twitter via the `#rstats` hashtag as well!
+For getting help, go over to [StackOverflow](https://stackoverflow.com) and look up questions tagged with `[r]` and any other R package you might be having trouble with. Another good resource that is solely dedicated to R problems and discussion is [RStudio Community](https://community.rstudio.com/). One can also try asking for help on Twitter via the `#rstats` hashtag as well! There is also the `R for Data Science` Slack ([here](https://www.rfordatasci.com/)) for a more interactive community to get help and learn more about R. 
 
 ## Create/develop R packages
 
-At ACDI/VOCA we have a whole suite of packages that helps us gather and process data from our databases and output them into a variety of dashboards and visualizations. The [R Packages]() book by Hadley Wickham is a great and free online resource for those who want to create their own package to help with their analysis or contribute to one of our own existing packages.
+At ACDI/VOCA we have a whole suite of packages that helps us gather and process data from our databases and output them into a variety of dashboards and visualizations. The [R Packages](http://r-pkgs.had.co.nz/) book by Hadley Wickham is a great and free online resource for those who want to create their own package to help with their analysis or contribute to one of our own existing packages.
 
 When collaborating on packages (this can apply to projects too) it is important to create your own branch alongside the main stream of development. This allows you and others to work in parallel without overwriting eachother's work. A good way to organize things is that you leave the main "master" branch alone while everybody 
 
@@ -128,7 +128,8 @@ When using an ACDI/VOCA R package, please remember to PULL the latest version fr
 Here are some general best practices that should be followed:
 
  - Inputs into complex functions should be stated explicitly, example: DO THIS: `function(arg1 = x, arg2 = y)` instead of this: `function(x,y)`. It's a bit more annoying, but does help resolve conflicts, especially when working with packages like `ACDIVOCAdataGetter` that are continuously in active development.
-
+ - Use `tibble` and `as_tibble` rather than `data.frame` and `as.data.frame`
+ 
 ## For Admins: how to test pull requests:
 
  1.	Git fetch
