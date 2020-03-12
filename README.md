@@ -1,18 +1,38 @@
 ACDI/VOCA R Policy
 ================
-2020-03-12 16:12:33
+2020-03-12 17:04:11
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/310px-R_logo.svg.png)
 
+R is a free software environment for statistical computing and graphics.
+Many users think of R as a statistics system. We prefer to think of it
+as an environment within which statistical techniques are implemented.
+However, R is useful for so much more, including advanced data
+management, programming, and creation of advanced visualizations, both
+interactive and non-interactive. It’s basically supercharged Excel.
+
+This repository acts as a guide to how ACDI/VOCA staff use R. If you
+find it useful, please feel free to use it in your own organization.
+
+If you are not an R user and have no idea what any of this means,
+[welcome to the community](https://education.rstudio.com/)\! (And you’re
+welcome\!)
+
+## First steps
+
+1.  Actually, ModernDive wrote an outstanding post on the first steps.
+    [Go here and do everything they
+    say\!](https://moderndive.netlify.com/1-getting-started.html).
+
 ## RStudio
 
-RStudio is an IDE for the R programming language and is the IDE of
-choice for ACDI/VOCA for using R. Split into two editions, RStudio for
-Desktop and RStudio Server, it is an incredibly empowering tool that
-allows one to use R to its full potential. The different panels in
-RStudio such as “Environment”, “Files”, “Help”, “History” allows for
-easy organization and interacting with all the files and objects in your
-analysis.
+RStudio is an Integrated Development Environment (IDE) for the R
+programming language and is the IDE of choice for ACDI/VOCA for using R.
+Split into two editions, RStudio for Desktop and RStudio Server, it is
+an incredibly empowering tool that allows one to use R to its full
+potential. The different panels in RStudio such as “Environment”,
+“Files”, “Help”, “History” allows for easy organization and
+interacting with all the files and objects in your analysis.
 
 ![](https://d33wubrfki0l68.cloudfront.net/7f83bbb6aae31666477e9125355915ecfa5dd967/90a82/images/2017-08-30-rstudio-dark-theme.png)
 
@@ -130,8 +150,8 @@ library(tidyverse)
   map_dbl(mean)
 ```
 
-    ##  [1]  0.8123807  2.0213381  2.8889394  3.6325555  4.9214859  5.6274930
-    ##  [7]  6.5273035  7.8198616  8.9798907 10.2728308
+    ##  [1]  1.007902  2.097946  3.650947  4.011458  4.652177  5.868114  7.188676
+    ##  [8]  8.077154  8.973139 10.166403
 
   - For naming functions and arguments we use snakecase. Ex.
     `ConnectToMEF()` and `fieldToMod = "Indicators"`.
