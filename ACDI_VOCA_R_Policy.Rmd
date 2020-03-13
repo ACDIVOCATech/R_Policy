@@ -6,6 +6,10 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+
+r = getOption("repos")
+r["CRAN"] = "http://cran.us.r-project.org"
+options(repos = r)
 ```
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/310px-R_logo.svg.png)
@@ -111,7 +115,7 @@ library(bulletchartr)
 
 ## Where to find inspiration and HELP!
 
-R is an open-source language with tons of community support online and in print. A great way to read up on the latest R news is to go on Twitter and search for `#rstats`. You should also subscribe to [R Bloggers](https://www.r-bloggers.com/) to get a curated stream of news, blog posts, and tutorials provided by thousands of R users from across the world. 
+R is an open-source language with tons of community support online and in print. A great way to read up on the latest R news is to go on Twitter and search for `#rstats`. You should also subscribe to [R Bloggers](https://www.r-bloggers.com/) & [R Weekly](https://rweekly.org/) to get a curated stream of news, blog posts, and tutorials provided by thousands of R users from across the world. 
 
 For getting help, go over to [StackOverflow](https://stackoverflow.com) and look up questions tagged with `[r]` and any other R package you might be having trouble with. Another good resource that is solely dedicated to R problems and discussion is [RStudio Community](https://community.rstudio.com/). One can also try asking for help on Twitter via the `#rstats` hashtag as well! There is also the `R for Data Science` Slack ([here](https://www.rfordatasci.com/)) for a more interactive community to get help and learn more about R. 
 
