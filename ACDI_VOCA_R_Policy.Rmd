@@ -127,6 +127,30 @@ When collaborating on packages (this can apply to projects too) it is important 
 
 When using an ACDI/VOCA R package, please remember to PULL the latest version from Github from the Github panel in RStudio. When contributing to any of our R packages please create your own branch and when you're done submit a Pull Request to the package authors. For an introduction on contributing to open-source using GitHub, see [here](https://github.com/firstcontributions/first-contributions).
 
+### Testing for LEAP packages
+
+We create tests as a way to flag and prevent errors whenever we change our code. Using continuous integration tools such as TRAVIS CI after every commit/push a whole suite of tests run to check if everything still runs fine with the new additions. As the LEAP packages are all connected to creating assets for the LEAP dashboard, in **each** package we have a `overall-runs` test files that runs the entire LEAP workflow to make sure all assets can be created for each LEAP project after a change in the code.
+
+## Working on a ACDI/VOCA repo or package
+
+1. Create a branch by `usethis::pr_init("very-brief-description-#IssueNumber")`
+
+2. Make your changes to the code/documentation/tests.
+
+3. Commit your code and make sure you reference the issue in your commit message(s). Push up to Github.
+
+4. Check TRAVIS to see if your branch passed the tests.
+
+5. If tests pass, you can begin the merge process on the repo page on Github.
+
+6. If you made multiple commits, instead of merging outright click on the dropdown and click on `Squash`.
+
+7. Delete your branch on Github.
+
+8. Pull new version of the Master into the server. If it's a package remember to Install/Rebuild it on the server after you pull it in.
+
+9. Delete the branch on your local.
+
 ## Misc
 
 Here are some general best practices that should be followed:
