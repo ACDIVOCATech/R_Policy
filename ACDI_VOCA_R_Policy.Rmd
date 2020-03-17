@@ -129,7 +129,7 @@ When using an ACDI/VOCA R package, please remember to PULL the latest version fr
 
 ### Testing for LEAP packages
 
-We create tests as a way to flag and prevent errors whenever we change our code. Using continuous integration tools such as TRAVIS CI after every commit/push a whole suite of tests run to check if everything still runs fine with the new additions. As the LEAP packages are all connected to creating assets for the LEAP dashboard, in **each** package we have a `overall-runs` test files that runs the entire LEAP workflow to make sure all assets can be created for each LEAP project after a change in the code.
+We create tests as a way to flag errors and to help prevent future errors whenever we change the code in any one of our packages. Using continuous integration tools such as TRAVIS CI after every commit/push, a whole suite of tests run to check if everything still runs fine with the new changes. As the LEAP packages are all connected to creating assets for the LEAP dashboard, in **each** LEAP package we have an `overall-runs` test file that runs the entire LEAP workflow to make sure all assets can be created for each LEAP project after a change in the code. The `overall-runs` tests run in addition to any of the package-specific tests we might have.
 
 ## Working on a ACDI/VOCA repo or package
 
@@ -159,6 +159,16 @@ Here are some general best practices that should be followed:
 
  - Inputs into complex functions should be stated explicitly, example: DO THIS: `function(arg1 = x, arg2 = y)` instead of this: `function(x,y)`. It's a bit more annoying, but does help resolve conflicts, especially when working with packages like `ACDIVOCAdataGetter` that are continuously in active development.
  - Use `tibble` and `as_tibble` rather than `data.frame` and `as.data.frame`
+ 
+When you are deleting a table from the database:
+
+1. Use `schemaFinder()` to check that the table is not references by other tables.
+
+2. Run the macro-checker to ensure that it's not in any macros.
+
+3. Delete the table via Access.
+
+4. Check if any related forms have been deleted, including the tile.
  
 ## For Admins: how to test pull requests:
 
