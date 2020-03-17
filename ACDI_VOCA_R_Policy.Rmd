@@ -133,23 +133,25 @@ We create tests as a way to flag and prevent errors whenever we change our code.
 
 ## Working on a ACDI/VOCA repo or package
 
-1. Create a branch by `usethis::pr_init("very-brief-description-#IssueNumber")`
+1. Create a branch with `usethis::pr_init("very-brief-description-#IssueNumber")`
 
 2. Make your changes to the code/documentation/tests.
 
-3. Commit your code and make sure you reference the issue in your commit message(s). Push up to Github.
+3. Re-run documentation & re-build the package (Windows: `Ctrl+Shift+D` to rerun roxygen and `Ctrl+Shift+B` to re-build/install the package). 
 
-4. Check TRAVIS to see if your branch passed the tests.
+4. Commit your code and make sure you reference the issue in your commit message(s)  (check out [this](https://help.github.com/en/github/writing-on-github/autolinked-references-and-urls) for how to do so). Push up to Github.
 
-5. If tests pass, you can begin the merge process on the repo page on Github.
+5. Check TRAVIS to see if your branch passed the tests.
 
-6. If you made multiple commits, instead of merging outright click on the dropdown and click on `Squash`.
+6. If tests pass, you can begin the `Pull Request + Merge` process on the Github repo.
 
-7. Delete your branch on Github.
+7. If you made multiple commits, instead of just merging via `Merge pull request`, click on the dropdown menu and click on `Squash and merge`.
 
-8. Pull new version of the Master into the server. If it's a package remember to Install/Rebuild it on the server after you pull it in.
+8. Delete your branch on Github.
 
-9. Delete the branch on your local.
+9. Pull new version of the Master into the server. If it's a package remember to Install/Rebuild it on the server after you pull it in.
+
+10. Switch back to master on your local RStudio and then delete the branch on your local: `git branch -d name-of-branch`
 
 ## Misc
 
