@@ -24,11 +24,11 @@ Above is what a RStudio set up might look like. You can spend time to position a
 
 ## R Projects
 
-Using R Projects is a vital part of keeping your work separately contained with its own working directory, workspace, history, and source documents. Instead of cluttering up your environment with multiple objects from multiple projects you can have a number of different projects opened in its own window so things from one project won't interfere with another.
+Using R Projects is a vital part of keeping your work separately contained with its own working directory, work space, history, and source documents. Instead of cluttering up your environment with multiple objects from multiple projects you can have a number of different projects opened in its own window so things from one project won't interfere with another.
 
 A great resource to get started with R Projects is [here](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects). 
 
-For a general overview of a project-oriented workflow in R, consult this website (still work-in-progress) [here](https://whattheyforgot.org/project-oriented-workflow.html) written by Jenny Bryan and Jim Hester from R Studio. For a shorter blogpost version of the above see [here](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/
+For a general overview of a project-oriented workflow in R, consult this website (still work-in-progress) [here](https://whattheyforgot.org/project-oriented-workflow.html) written by Jenny Bryan and Jim Hester from R Studio. For a shorter blog post version of the above see [here](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/
 ).
 
 ## GitHub
@@ -117,13 +117,13 @@ library(bulletchartr)
 
 R is an open-source language with tons of community support online and in print. A great way to read up on the latest R news is to go on Twitter and search for `#rstats`. You should also subscribe to [R Bloggers](https://www.r-bloggers.com/) & [R Weekly](https://rweekly.org/) to get a curated stream of news, blog posts, and tutorials provided by thousands of R users from across the world. 
 
-For getting help, go over to [StackOverflow](https://stackoverflow.com) and look up questions tagged with `[r]` and any other R package you might be having trouble with. Another good resource that is solely dedicated to R problems and discussion is [RStudio Community](https://community.rstudio.com/). One can also try asking for help on Twitter via the `#rstats` hashtag as well! There is also the `R for Data Science` Slack ([here](https://www.rfordatasci.com/)) for a more interactive community to get help and learn more about R. 
+For getting help, go over to [StackOverflow](https://stackoverflow.com) and look up questions tagged with `[r]` and any other R package you might be having trouble with. Another good resource that is solely dedicated to R problems and discussion is [RStudio Community](https://community.rstudio.com/). One can also try asking for help on Twitter via the `#rstats` hash tag as well! There is also the `R for Data Science` Slack ([here](https://www.rfordatasci.com/)) for a more interactive community to get help and learn more about R. 
 
 ## Create/develop R packages
 
 At ACDI/VOCA we have a whole suite of packages that helps us gather and process data from our databases and output them into a variety of dashboards and visualizations. The [R Packages](http://r-pkgs.had.co.nz/) book by Hadley Wickham is a great and free online resource for those who want to create their own package to help with their analysis or contribute to one of our own existing packages.
 
-When collaborating on packages (this can apply to projects too) it is important to create your own branch alongside the main stream of development. This allows you and others to work in parallel without overwriting eachother's work. A good way to organize things is that you leave the main "master" branch alone while everybody 
+When collaborating on packages (this can apply to projects too) it is important to create your own branch alongside the main stream of development. This allows you and others to work in parallel without overwriting each other's work. A good way to organize things is that you leave the main "master" branch alone while everybody 
 
 When using an ACDI/VOCA R package, please remember to PULL the latest version from Github from the Github panel in RStudio. When contributing to any of our R packages please create your own branch and when you're done submit a Pull Request to the package authors. For an introduction on contributing to open-source using GitHub, see [here](https://github.com/firstcontributions/first-contributions).
 
@@ -145,7 +145,7 @@ We create tests as a way to flag errors and to help prevent future errors whenev
 
 6. If tests pass, you can begin the `Pull Request + Merge` process on the Github repo.
 
-7. If you made multiple commits, instead of just merging via `Merge pull request`, click on the dropdown menu and click on `Squash and merge`.
+7. If you made multiple commits, instead of just merging via `Merge pull request`, click on the drop-down menu and click on `Squash and merge`.
 
 8. Delete your branch on Github.
 
@@ -177,5 +177,5 @@ When you are deleting a table from the database:
  3.	Build Package using “BUILD > MORE > CLEAN AND REBUILD”. Alternatively, use R CMD INSTALL –preclean in console.
  4.	Run tests (Ctrl + Shift + T). If this passes, continue
  5.	See if Issue has been resolved. If yes, Merge with Master, and delete branch.
- 6.	Pull Master into the server, turn off PT/GQ runners on crontab, run Day_Deleter() and stay vigilant for 30 mins. All should be good.
+ 6.	Pull Master into the server, turn off PT/GQ runners on crontab, run `Day_Deleter()` and stay vigilant for 30 mins. All should be good.
  7.	Delete local branch (run `git gc` or `git prune` or `git branch -D branch_name`).
