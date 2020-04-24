@@ -259,7 +259,9 @@ Here are some general best practices that should be followed:
     conflicts, especially when working with packages like
     `ACDIVOCAdataGetter` that are continuously in active development.
 
-## For Admins: how to test pull requests:
+# For Admins
+
+## How to test pull requests:
 
 1.  Git fetch
 2.  Switch branch to one to test
@@ -272,3 +274,13 @@ Here are some general best practices that should be followed:
     Day\_Deleter() and stay vigilant for 30 mins. All should be good.
 7.  Delete local branch (run `git gc` or `git prune` or `git branch -D
     branch_name`).
+
+## file management strategy:
+
+ * Each concept get their own folder starting with "AV_". The functions they depend on are added to a custom package starting with "AVDG".
+ * Each concept repository will be kept clean and the root will only contain the runner `R`, `sh` and `log` files. In some cases, auth tokens and other such randomities can be allowed to live on the folder. Everything else should go into these folders (where required):
+    * `Inputs` - Inputs to the process. - BE CAREFUL - sometimes this isn't a real folder, but a symlink from dropbox. 
+    * `Outputs` - Whatever comes out of the project. This is almost always symlinked into dropbox.
+    * `Punctual` - one-off scripts, something like testing, or one-time cleans, etc... they all go into this folder
+
+ * Git commit strategy - `R` files and their `sh` runners **should** get committed. `log` files, input and output data should not. Counter files (like which inputs have been processed) are in the grey zone... for now let's say yes but I don't like it. 
