@@ -153,6 +153,24 @@ We create tests as a way to flag errors and to help prevent future errors whenev
 
 10. Switch back to master on your local RStudio and then delete the branch on your local: `git branch -d name-of-branch`
 
+## New Project
+
+* Make sure that in MEF these tables have the correct settings for options such as `LEAP` (TRUE/FALSE), `Hierarchy` (TRUE/FALSE), etc.
+
+* Ensure the project contains `Indicators_Targets` and `Data Reference` tables that are PERFECTLY compliant.
+
+* Add record to the PFdb, and add in all the relevant details
+
+* Deploy new project-specific package for analysts to use.
+
+
+
+
+
+
+
+
+
 ## Misc
 
 Here are some general best practices that should be followed:
