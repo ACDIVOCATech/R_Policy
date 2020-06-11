@@ -159,16 +159,26 @@ We create tests as a way to flag errors and to help prevent future errors whenev
 
 * Ensure the project contains `Indicators_Targets` and `Data Reference` tables that are PERFECTLY compliant.
 
-* Add record to the PFdb, and add in all the relevant details
+* Add record to the PFdb, and add in all the relevant details (LEAP runs, Hierarchy runs, etc.)
+
 
 * Deploy new project-specific package for analysts to use.
 
+* Field Schema DB watcher:
+
+Filter NEW projects that won't have data in previous runs' `FieldSchema` csv file. When it tries to find the diffs, it will filter NEWLY added projects that still have not gone through this FS script and whose results weren't saved in a previous run. The NEW FieldSchema_new will still have the NEW project FS data and that will be saved for the next run. In the next run, the "old" FS will contain the NEW project data, it won't be filtered out in the find diffs part of the code.
+
+* PFdb watcher:
+
+* IndTar checker (AVDGleap):
 
 
 
+When removing old/defunct projects: 
 
+* In PFdb: uncheck "Active", "LEAP runs", "Hierarchy runs", where appropriate.
 
-
+* FieldSchema watcher: take out any OLD projects from oldFieldSchema that were taken out of LEAP.
 
 
 ## Misc
